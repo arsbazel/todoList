@@ -1,16 +1,14 @@
 import React from "react";
+import {taskType, typeFilter} from "../App";
 
 type propsType = {
-    el: {
-        id: number
-    },
-    callBack: (id: number) => void
+        value?: string
+    callBack: () => void
+    title: string
 }
 
 export const Button = (props: propsType) => {
     return (
-        <button onClick={() => {
-            props.callBack(props.el.id)
-        }}>x
+        <button onClick={props.callBack}>{props.title}
         </button>)
 }
