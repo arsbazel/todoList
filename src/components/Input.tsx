@@ -1,6 +1,6 @@
 import React, {Dispatch, KeyboardEvent, SetStateAction, useState} from "react";
 type inputPropsType = {
-    addTask: (value: string) => void
+    callBack  : (value: string) => void
     setNewTaskValue: Dispatch<SetStateAction<string>>
     newTaskValue: string
 }
@@ -19,7 +19,7 @@ export const Input = (props: inputPropsType) => {
                 setError('Empty input')
                 return
             }
-            props.addTask(props.newTaskValue);
+            props.callBack(props.newTaskValue);
             setError(null)
         }
             }
